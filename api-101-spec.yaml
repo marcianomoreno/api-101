@@ -14,3 +14,19 @@ type Mutation {
     # Name for the User item
     name: String!): User!
 }
+type Drum{
+  id: String!
+  brand: String!
+  diameter: Int!
+  depth: Int!
+}
+type Mutation{
+  addDrum(
+    # Dimensions for the Drum item
+    brand: String!
+    diameter: Int!
+    depth: Int!): Drum!
+}
+type Query{
+  drum (id: String): Drum
+}
